@@ -6,6 +6,7 @@ import { HiMail } from "react-icons/hi";
 const HeaderSocials = () => {
   return (
     <div className="header__socials header__socials--top">
+      {/* LinkedIn */}
       <a
         href="https://www.linkedin.com/in/adelnovalalfarizi"
         target="_blank"
@@ -13,6 +14,8 @@ const HeaderSocials = () => {
       >
         <BsLinkedin className="social-icon" />
       </a>
+
+      {/* GitHub */}
       <a
         href="https://github.com/Biggzy-K423"
         target="_blank"
@@ -20,6 +23,8 @@ const HeaderSocials = () => {
       >
         <FaGithub className="social-icon" />
       </a>
+
+      {/* Instagram */}
       <a
         href="https://www.instagram.com/your_instagram_username"
         target="_blank"
@@ -27,6 +32,8 @@ const HeaderSocials = () => {
       >
         <BsInstagram className="social-icon" />
       </a>
+
+      {/* Email */}
       <a
         href="mailto:adelfarizi@gmail.com"
         target="_blank"
