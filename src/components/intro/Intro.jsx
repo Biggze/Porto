@@ -30,13 +30,13 @@ const Intro = () => {
             </article>
           </div>
           <p>
-            Able Full-stack Developer with over 6 years of expertise in building Web & Mobile applications development.
+          I am a 20-year-old Informatics student at the Faculty of Computer Science, Universitas Jember.
             <br />
-            My goal is to deliver efficient and effective solutions, and I adhere to the following principles in my work:
+            With a strong passion for front-end development, I am highly motivated to grow and expand my skills.
             <br />
-            - I focus on providing solutions that address the client's needs and solve their problems.
+            I have experience in organizational activities and enjoy exploring new opportunities
             <br />
-            - I believe in keeping my clients engaged throughout the development process, ensuring them.
+            As a flexible and adaptive learner, I quickly adjust to new work environments.
           </p>
         </div>
       </div>
