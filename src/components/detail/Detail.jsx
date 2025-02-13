@@ -1,16 +1,14 @@
-import "./portfolio.css";
-
+import React from "react";
+import { useParams } from "react-router-dom";
+import "./detailporto.css"; // Import CSS untuk halaman detail
 import IMG1 from "../../assets/Desktop - 17.png";
 import IMG2 from "../../assets/WhatsApp Image 2024-04-16 at 13.27 1.png";
 import IMG3 from "../../assets/Mobinspire.png";
 import IMG4 from "../../assets/Raise.png";
 import IMG5 from "../../assets/Potsave.png";
 import IMG6 from "../../assets/Health.png";
-import React from "react";
 
-//Portfolio function
-const Portfolio = () => {
-  const soloProjects = [
+const soloProjects = [
     {
       id: 1,
       title: "Pengelolaan Capstone",
@@ -67,39 +65,28 @@ const Portfolio = () => {
     },
   ];
 
-  const handleCheckDetail = (projectId) => {
-    window.open(`/detail/${projectId}`, "_blank");
-  };
+const DetailPorto = () => {
+  const { id } = useParams(); // Ambil ID dari URL
+  const project = soloProjects.find((pro) => pro.id === parseInt(id));
+
+  if (!project) {
+    return <div>Project not found</div>;
+  }
 
   return (
-    <section id="portfolio">
-      <h5>My Recent Work</h5>
-      <h2>Portfolio</h2>
-
-      <div className="container portfolio__container">
-        {soloProjects.map((pro) => (
-          <article className="portfolio__item" key={pro.id}>
-            <div className="portfolio__item-image">
-              <img src={pro.img} alt={pro.title} />
-            </div>
-            <div className="portfolio__item-content">
-              <h3>{pro.title}</h3>
-              <p>{pro.description}</p>
-              <p>{pro.technologies}</p>
-            </div>
-            <div className="portfolio__item-cta">
-              <button
-                className="btn btn-primary"
-                onClick={() => handleCheckDetail(pro.id)} // Buka halaman detail di tab baru
-              >
-                Check Detail
-              </button>
-            </div>
-          </article>
-        ))}
+    <section id="detail-porto">
+      <h2>{project.title}</h2>
+      <div className="detail-porto__container">
+        <div className="detail-porto__image">
+          <img src={project.img} alt={project.title} />
+        </div>
+        <div className="detail-porto__content">
+          <p>{project.description}</p>
+          <p><strong>Technologies:</strong> {project.technologies}</p>
+        </div>
       </div>
     </section>
   );
 };
 
-export default Portfolio;
+export default DetailPorto;
