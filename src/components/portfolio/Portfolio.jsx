@@ -70,7 +70,7 @@ const Portfolio = () => {
   // Fungsi untuk menangani klik tombol "Check Detail"
   const handleCheckDetail = (projectId) => {
     console.log(`Check Detail for project with ID: ${projectId}`);
-    
+    // Anda bisa menambahkan logika navigasi atau modal di sini
   };
   
   return (
