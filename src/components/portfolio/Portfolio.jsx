@@ -1,7 +1,7 @@
 import "./portfolio.css";
 
-import IMG1 from "../../assets/WhatsApp Image 2024-04-16 at 13.27 1.png";
-import IMG2 from "../../assets/Desktop - 17.png";
+import IMG1 from "../../assets/Desktop - 17.png";
+import IMG2 from "../../assets/WhatsApp Image 2024-04-16 at 13.27 1.png";
 import IMG3 from "../../assets/Mobinspire.png";
 import IMG4 from "../../assets/Raise.png";
 import IMG5 from "../../assets/Potsave.png";
@@ -27,7 +27,7 @@ const Portfolio = () => {
       description:
         "MeetNative is an upselling platform that helps consumers and local businesses get more for their money.",
       technologies: "Figma | Architecture Enterprise |",
-      link:"",
+      link: "",
     },
     {
       id: 3,
@@ -67,6 +67,12 @@ const Portfolio = () => {
     },
   ];
 
+  // Fungsi untuk menangani klik tombol "Check Detail"
+  const handleCheckDetail = (projectId) => {
+    console.log(`Check Detail for project with ID: ${projectId}`);
+    
+  };
+  
   return (
     <section id="portfolio">
       <h5>My Recent Work</h5>
@@ -84,7 +90,12 @@ const Portfolio = () => {
               <p>{pro.technologies}</p>
             </div>
             <div className="portfolio__item-cta">
-           
+              <button
+                className="btn btn-primary"
+                onClick={() => handleCheckDetail(pro.id)}
+              >
+                Check Detail
+              </button>
             </div>
           </article>
         ))}
