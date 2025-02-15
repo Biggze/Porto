@@ -1,45 +1,39 @@
-#detail-porto {
-  padding: 1rem 2rem; /* Padding atas dikurangi */
-}
-
-.detail-porto__container {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem; /* Jarak antara elemen dikurangi */
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.detail-porto__image img {
+/* Gaya untuk modal overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
-  border-radius: 1.5rem;
-}
-
-.detail-porto__content {
-  background: var(--color-bg-variant);
-  padding: 1.5rem;
-  border-radius: 1.5rem;
-}
-
-.detail-porto__content p {
-  margin: 0.5rem 0;
-}
-
-/* Gaya untuk tombol Kembali ke Beranda */
-.back-to-home {
-  display: inline-flex;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8); /* Latar belakang gelap */
+  display: flex;
+  justify-content: center;
   align-items: center;
-  gap: 0.5rem;
-  color: var(--color-primary);
-  text-decoration: none;
-  padding: 0.5rem 1rem; /* Padding untuk tombol */
-  background: rgba(255, 255, 255, 0.1); /* Latar belakang transparan */
-  border-radius: 0.5rem; /* Sudut tombol melengkung */
-  transition: background 0.3s ease, color 0.3s ease;
-  margin-bottom: 1rem; /* Jarak dari elemen di bawahnya */
+  z-index: 1000; /* Pastikan modal di atas elemen lain */
 }
 
-.back-to-home:hover {
-  background: rgba(255, 255, 255, 0.2); /* Latar belakang saat dihover */
-  text-decoration: none;
+/* Gaya untuk konten modal */
+.modal-content {
+  background: var(--color-bg);
+  padding: 2rem;
+  border-radius: 1.5rem;
+  max-width: 800px;
+  width: 90%;
+  position: relative;
+}
+
+/* Gaya untuk tombol close */
+.modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: transparent;
+  border: none;
+  color: var(--color-primary);
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.modal-close:hover {
+  color: var(--color-white);
 }

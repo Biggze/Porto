@@ -1,6 +1,5 @@
 import React from "react";
-import { useParams, Link } from "react-router-dom";
-import { FaArrowLeft } from "react-icons/fa"; // Impor ikon panah
+import { FaTimes } from "react-icons/fa"; // Impor ikon close
 import "./detailporto.css"; // Import CSS untuk halaman detail
 import IMG1 from "../../assets/Desktop - 17.png";
 import IMG2 from "../../assets/WhatsApp Image 2024-04-16 at 13.27 1.png";
@@ -66,21 +65,20 @@ const soloProjects = [
   },
 ];
 
-const DetailPorto = () => {
-  const { id } = useParams(); // Ambil ID dari URL
-  const project = soloProjects.find((pro) => pro.id === parseInt(id));
+const DetailPorto = ({ projectId, onClose }) => {
+  const project = soloProjects.find((pro) => pro.id === projectId);
 
   if (!project) {
     return <div>Project not found</div>;
   }
 
   return (
-    <section id="detail-porto">
-      <div className="detail-porto__container">
-        {/* Tombol Kembali ke Beranda */}
-        <Link to="/" className="back-to-home">
-          <FaArrowLeft /> Kembali ke Beranda
-        </Link>
+    <div className="modal-overlay">
+      <div className="modal-content">
+        {/* Tombol Close */}
+        <button className="modal-close" onClick={onClose}>
+          <FaTimes />
+        </button>
 
         <h2>{project.title}</h2>
         <div className="detail-porto__image">
@@ -91,7 +89,7 @@ const DetailPorto = () => {
           <p><strong>Technologies:</strong> {project.technologies}</p>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 

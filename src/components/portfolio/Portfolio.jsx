@@ -1,15 +1,16 @@
+import React, { useState } from "react";
 import "./portfolio.css";
-
 import IMG1 from "../../assets/Desktop - 17.png";
 import IMG2 from "../../assets/WhatsApp Image 2024-04-16 at 13.27 1.png";
 import IMG3 from "../../assets/Mobinspire.png";
 import IMG4 from "../../assets/Raise.png";
 import IMG5 from "../../assets/Potsave.png";
 import IMG6 from "../../assets/Health.png";
-import React from "react";
+import DetailPorto from "../detail/Detail"; // Import komponen DetailPorto
 
-//Portfolio function
 const Portfolio = () => {
+  const [selectedProjectId, setSelectedProjectId] = useState(null);
+
   const soloProjects = [
     {
       id: 1,
@@ -68,7 +69,11 @@ const Portfolio = () => {
   ];
 
   const handleCheckDetail = (projectId) => {
-    window.open(`/detail/${projectId}`, "_blank");
+    setSelectedProjectId(projectId); // Tampilkan modal dengan detail proyek
+  };
+
+  const handleCloseModal = () => {
+    setSelectedProjectId(null); // Tutup modal
   };
 
   return (
@@ -90,7 +95,7 @@ const Portfolio = () => {
             <div className="portfolio__item-cta">
               <button
                 className="btn btn-primary"
-                onClick={() => handleCheckDetail(pro.id)} // Buka halaman detail di tab baru
+                onClick={() => handleCheckDetail(pro.id)} // Tampilkan modal
               >
                 Check Detail
               </button>
@@ -98,6 +103,11 @@ const Portfolio = () => {
           </article>
         ))}
       </div>
+
+      {/* Tampilkan modal jika ada proyek yang dipilih */}
+      {selectedProjectId && (
+        <DetailPorto projectId={selectedProjectId} onClose={handleCloseModal} />
+      )}
     </section>
   );
 };
