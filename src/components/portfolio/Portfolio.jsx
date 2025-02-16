@@ -17,18 +17,18 @@ const Portfolio = () => {
       title: "Pengelolaan Capstone",
       img: IMG1,
       description:
-        "It is the website for construction machine renting company (Flexcavo) from Berlin",
+        "Sebuah website yang digunakan untuk mempermudah dosen dalam mengelola data mahasiswa yang telah atau akan mendaftar capstone ",
       technologies: "React.js | Express | Artisan | Styled Component | Figma ",
-      link: "",
+      role: "Front-End Developer",
     },
     {
       id: 2,
       title: "Sipetani",
       img: IMG2,
       description:
-        "MeetNative is an upselling platform that helps consumers and local businesses get more for their money.",
-      technologies: "Figma | Architecture Enterprise |",
-      link: "",
+        "Sebuah website yang digunakan untuk membantu para petani dalam memprediksi kandungan ph tanah yang akan menentukan prediksi apakah tanah tersebut cocok ditanami sebuah tanaman menggunakan Artificial Intelegence ",
+      technologies: "Figma | Architecture Enterprise | reactjs ",
+      role: "Designer",
     },
     {
       id: 3,
@@ -37,7 +37,7 @@ const Portfolio = () => {
       description:
         "Mob Inspire streamlines the business operations in corporate sector by providing cost-effective and highly productive software solutions.",
       technologies: "Nginx | PHP | MySQL | jQuery",
-      link: "",
+      role: "Front-End Developer",
     },
     {
       id: 4,
@@ -46,7 +46,7 @@ const Portfolio = () => {
       description:
         "Get started with free educational courses to mastery the foundations of startup equity as an African business.",
       technologies: "Remix | React.js | Webflow | jQuery",
-      link: "",
+      role: "",
     },
     {
       id: 5,
@@ -55,7 +55,7 @@ const Portfolio = () => {
       description:
         "Through the PotSave.com platform, PotSave offers in-person product assessment and ordering services, accessible via the website, mobile applications, and software.",
       technologies: "React | Next.js | Lodash | Tailwind CSS",
-      link: "",
+      role: "",
     },
     {
       id: 6,
@@ -64,7 +64,7 @@ const Portfolio = () => {
       description:
         "U of U Health is the Mountain West's only academic health care system. We provide patient care, medical research, and physician training.",
       technologies: "Angular | Drupal | Nginx | TypeScript",
-      link: "",
+      role: "",
     },
   ];
 
@@ -90,7 +90,7 @@ const Portfolio = () => {
             <div className="portfolio__item-content">
               <h3>{pro.title}</h3>
               <p>{pro.description}</p>
-              <p>{pro.technologies}</p>
+              
             </div>
             <div className="portfolio__item-cta">
               <button
