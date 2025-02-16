@@ -35,8 +35,8 @@ const Portfolio = () => {
       title: "E Kost",
       img: IMG3,
       description:
-        "Mob Inspire streamlines the business operations in corporate sector by providing cost-effective and highly productive software solutions.",
-      technologies: "Nginx | PHP | MySQL | jQuery",
+        "project mata kuliah pemrograman website yang digunakan untuk mempermudah pengguna dalam mencari kost yang sesuai dengan kebutuhan mahasiswa.",
+      technologies: " PHP | MySQL ",
       role: "Front-End Developer",
     },
     {
