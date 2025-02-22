@@ -8,6 +8,7 @@ import IMG4 from "../../assets/Raise.png";
 import IMG5 from "../../assets/Potsave.png";
 import IMG6 from "../../assets/Health.png";
 
+
 const soloProjects = [
   {
     id: 1,

@@ -3,7 +3,7 @@ import "./portfolio.css";
 import IMG1 from "../../assets/Desktop - 17.png";
 import IMG2 from "../../assets/WhatsApp Image 2024-04-16 at 13.27 1.png";
 import IMG3 from "../../assets/Mobinspire.png";
-import IMG4 from "../../assets/Raise.png";
+import IMG4 from "../../assets/pboD.png";
 import IMG5 from "../../assets/Potsave.png";
 import IMG6 from "../../assets/Health.png";
 import DetailPorto from "../detail/Detail"; // Import komponen DetailPorto
@@ -41,12 +41,12 @@ const Portfolio = () => {
     },
     {
       id: 4,
-      title: "Raise",
+      title: "Peta Jember",
       img: IMG4,
       description:
-        "Get started with free educational courses to mastery the foundations of startup equity as an African business.",
-      technologies: "Remix | React.js | Webflow | jQuery",
-      role: "",
+      "Sebuah project kuliah yang bekerjasama dengan pemerintah daerah untuk membuat aplikasi yang dapat membranding wisata didaerah jember ",
+      technologies: "C++",
+      role: "Back-End Developer",
     },
     {
       id: 5,
