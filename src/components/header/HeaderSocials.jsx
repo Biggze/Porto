@@ -17,7 +17,7 @@ const HeaderSocials = () => {
 
       {/* GitHub */}
       <a
-        href="https://github.com/Biggzy-K423"
+        href="https://github.com/Biggze"
         target="_blank"
         rel="noreferrer"
       >
